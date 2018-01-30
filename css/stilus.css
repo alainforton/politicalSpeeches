@@ -1,3 +1,16 @@
 td {
     background-color: red;
 }
+
+div.center {
+    align-content: center;
+    text-align: center;
+    background-color: darkseagreen;
+}
+
+.estiloUno {
+    font-family: 'Abril Fatface';font-size: 22px;
+}
+.estiloDos {
+    font-family: 'ABeeZee';font-size: 22px;
+}
