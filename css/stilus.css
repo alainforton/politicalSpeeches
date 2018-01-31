@@ -1,16 +1,24 @@
-td {
-    background-color: red;
+body {
+    text-align: center;
 }
 
-div.center {
-    align-content: center;
-    text-align: center;
+div.contenido {
+/*
+    width: 100px;
+    height: 100px; 
+*/
+}
+table.center {
+    margin-left:auto; 
+    margin-right:auto;
     background-color: darkseagreen;
+    width: 100%;
+    height: 100%;
 }
 
 .estiloUno {
-    font-family: 'Abril Fatface';font-size: 22px;
+    font-family: 'Abril Fatface';font-size: 100%;
 }
 .estiloDos {
-    font-family: 'ABeeZee';font-size: 22px;
+    font-family: 'ABeeZee';font-size: 100%;
 }
