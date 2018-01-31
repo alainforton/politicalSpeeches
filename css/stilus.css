@@ -1,24 +1,87 @@
 body {
     text-align: center;
 }
+/*paleta de colores
+  #fefbd8; amarillo
+  #80ced6; background
+  #618685; verde oscuro
+  #d5f4e6; verde claro*/
 
 div.contenido {
+    margin-left:auto; 
+    margin-right:auto;
+    width: 60%;
+    height: 100%;
+    background-color: #d5f4e6;
 /*
-    width: 100px;
-    height: 100px; 
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 */
+/*    box-shadow: 2px 2px #fefbd8;*/
 }
 table.center {
     margin-left:auto; 
     margin-right:auto;
-    background-color: darkseagreen;
-    width: 100%;
+    background-color: #80ced6;
+    width: 96%;
     height: 100%;
+/*    border-radius: 5px;*/
+    
 }
 
-.estiloUno {
-    font-family: 'Abril Fatface';font-size: 100%;
+/*soy del sur vengo del sur*/
+
+.estiloUnoa {
+    font-family: 'Abril Fatface';
+    font-size: 17px;
+    text-align: right;
+    width: 100px;
+    height: auto;
+    color: #618685;
 }
+.estiloUnob {
+    font-family: 'Abril Fatface';
+    font-size: 50px;
+    text-align: left;
+    width: 100px;
+    color: #618685;
+    height: auto;
+    text-shadow: -1px -1px #fefbd8;
+}
+
+/*esquina del atlantico y el plata*/
+
 .estiloDos {
-    font-family: 'ABeeZee';font-size: 100%;
+    font-family: 'ABeeZee';
+    font-size: 18px;
+    text-align: center;
+    width: 100px;
+    color: #d5f4e6;
 }
+.estiloDosa {    
+    width: 100px;
+    text-align: right;
+}
+.estiloDosb {
+    font-family: 'ABeeZee';
+    font-size: 29px;
+    width: 100px;
+    text-align: left;
+    color: #d5f4e6;
+}
+.circle {
+    font-family: 'ABeeZee';
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 39px;
+    color: #80ced6;
+    line-height: 39px;
+    text-align: center;
+    background: #d5f4e6;
+    float: right;
+    margin-right: 14px;    
+}
+
+/**/
