@@ -12,6 +12,7 @@
   -->
   <title>Alain/TEST</title>
   
+  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
   
@@ -25,6 +26,21 @@
   
   <canvas id='canva'></canvas>
     <script  src="js/index.js"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.0.js"></script>
+    <script>
+SC.initialize({
+  client_id: 'turborecordings'
+});
+
+//https://soundcloud.com/turborecordings/02-opr
+SC.stream('/turborecordings/02-opr').then(function(player){
+  player.play().then(function(){
+    console.log('Playback started!');
+  }).catch(function(e){
+    console.error('Playback rejected. Try calling play() from a user interaction.', e);
+  });
+});
+</script>
 
 
 
