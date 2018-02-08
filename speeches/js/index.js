@@ -36,7 +36,7 @@ function nPart() {
 var pull = .03;
 
 function txt(){
-  var t = "fillStroke.randomColor()".split("  ").join(String.fromCharCode(0x2004));
+  var t = "pasa_el_dedo!".split("  ").join(String.fromCharCode(0x2004));
   fuckYou.font = "3.5em Philosopher";
   fuckYou.fillStyle = randomColor();
   fuckYou.fillText(t, (c.width - fuckYou.measureText(t).width) * 0.5, c.height * 0.5);
