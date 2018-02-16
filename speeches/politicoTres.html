@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title title="Speeches">Cubo</title>
+        <style>
+          #canvas-demo {
+    background-color: #F4F4F4;
+}
+        </style>
+        
+        
+    </head>    
+    <body>
+      <canvas id="canvas-demo" width="1500" height="1400"></canvas>
+       
+        <script>
+        // get DOM or jQuery element
+// like: $('#canvas-demo')
+var canvas = document.getElementById('canvas-demo');
+
+// create pixel view container in point
+var point = new obelisk.Point(270, 220);
+var pixelView = new obelisk.PixelView(canvas, point);
+
+
+
+var dimensionA = new obelisk.CubeDimension(40, 40, 40);
+var colorA = new obelisk.CubeColor().getByHorizontalColor(obelisk.ColorPattern.GRAY);
+var cubAA = new obelisk.Cube(dimensionA, colorA);
+var cube2A = new obelisk.Point3D(60, -20, -20);
+pixelView.renderObject(cubAA, cube2A);
+// create cube
+var dimension = new obelisk.CubeDimension(40, 80, 40);
+var color = new obelisk.CubeColor().getByHorizontalColor(obelisk.ColorPattern.GRAY);
+
+var cube = new obelisk.Cube(dimension, color);
+pixelView.renderObject(cube);
+
+var dimension = new obelisk.CubeDimension(40, 40, 120);
+var color = new obelisk.CubeColor().getByHorizontalColor(obelisk.ColorPattern.BLUE);
+
+var cubo = new obelisk.Cube(dimension, color);
+
+
+var cube1 = new obelisk.Point3D(40, 0, -40);
+pixelView.renderObject(cubo, cube1);
+
+var dimension = new obelisk.CubeDimension(40, 120, 40);
+var color = new obelisk.CubeColor().getByHorizontalColor(obelisk.ColorPattern.YELLOW);
+
+var cubA = new obelisk.Cube(dimension, color);
+
+var cube2 = new obelisk.Point3D(60, -20, 20);
+pixelView.renderObject(cubA, cube2);
+
+
+</script>
+    </body>
+</html>
