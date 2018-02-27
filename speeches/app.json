@@ -1,0 +1,169 @@
+{
+	"metadata": {
+		"type": "App"
+	},
+	"project": {
+		"gammaInput": true,
+		"gammaOutput": true,
+		"shadows": true,
+		"vr": false
+	},
+	"camera": {
+		"metadata": {
+			"version": 4.5,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"object": {
+			"uuid": "CAE67792-A91E-4CCB-BF15-D59215B8177E",
+			"type": "PerspectiveCamera",
+			"name": "Camera",
+			"matrix": [1.286707,0,-0.551711,0,0.040902,1.396148,0.095392,0,0.550193,-0.103791,1.283166,0,1.69799,-0.348226,4.430161,1],
+			"fov": 51.46,
+			"zoom": 1,
+			"near": 0.32,
+			"far": 9999.08,
+			"focus": 10,
+			"aspect": 1.512061,
+			"filmGauge": 35,
+			"filmOffset": 0
+		}
+	},
+	"scene": {
+		"metadata": {
+			"version": 4.5,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"geometries": [
+			{
+				"uuid": "FF6E015B-56E8-4A9E-BEDA-60C5F35FFAF2",
+				"type": "IcosahedronGeometry",
+				"radius": 0.18,
+				"detail": 4
+			},
+			{
+				"uuid": "A21BD2F7-3B46-46F4-85E4-9F514BF54E40",
+				"type": "IcosahedronGeometry",
+				"radius": -0.02,
+				"detail": 4
+			},
+			{
+				"uuid": "735873C7-FDC2-4A47-95E1-E8345338DC6C",
+				"type": "IcosahedronGeometry",
+				"radius": 0.3,
+				"detail": 5
+			}],
+		"materials": [
+			{
+				"uuid": "50ED51F1-DEA4-4B61-8082-BF41609E8C27",
+				"type": "ShaderMaterial",
+				"depthFunc": 3,
+				"depthTest": true,
+				"depthWrite": true,
+				"wireframe": true,
+				"uniforms": {
+					"time": {
+						"value": 12834.445813
+					}
+				},
+				"vertexShader": "uniform float time;\nvarying vec3 vPosition;\nvoid main() {\n\tvPosition = position;\n\tvPosition.x += sin( time + vPosition.z * 4.0 ) / 4.0;\n\tvPosition.y += cos( time + vPosition.z * 4.0 ) / 4.0;\n\tgl_Position = projectionMatrix * modelViewMatrix * vec4( vPosition, 1.0 );\n}",
+				"fragmentShader": "varying vec3 vPosition;\nvoid main() {\n\tgl_FragColor = vec4( vPosition * 2.0, 1.0 );\n}"
+			}],
+		"object": {
+			"uuid": "5FC9ACA9-2A93-474D-AA32-FACC76551914",
+			"type": "Scene",
+			"name": "Scene",
+			"matrix": [0.92,0,0,0,0,0.91496,-0.096166,0,0,0.096166,0.91496,0,-0.46,-0.12,0,1],
+			"children": [
+				{
+					"uuid": "FC7B6CF2-6386-4F47-9CE6-8ADB9FCA6E1F",
+					"type": "Mesh",
+					"name": "Icosahedron 1",
+					"castShadow": true,
+					"receiveShadow": true,
+					"matrix": [1.051879,0,0,0,0,0.834009,0,0,0,0,0.834009,0,-0.142453,0.220781,-0.905571,1],
+					"geometry": "FF6E015B-56E8-4A9E-BEDA-60C5F35FFAF2",
+					"material": "50ED51F1-DEA4-4B61-8082-BF41609E8C27"
+				},
+				{
+					"uuid": "516E8F03-42BB-48F6-81AB-E125ADDEE0D9",
+					"type": "Mesh",
+					"name": "Icosahedron 1",
+					"castShadow": true,
+					"receiveShadow": true,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-0.594071,0.022012,-0.732543,1],
+					"geometry": "A21BD2F7-3B46-46F4-85E4-9F514BF54E40",
+					"material": "50ED51F1-DEA4-4B61-8082-BF41609E8C27"
+				},
+				{
+					"uuid": "D4AED295-59D5-4B5A-83D6-341EAE902958",
+					"type": "Mesh",
+					"name": "Icosahedron 1",
+					"castShadow": true,
+					"receiveShadow": true,
+					"matrix": [0.552684,-0.715944,0.426573,0,0.021343,-0.499525,-0.866036,0,0.833117,0.487749,-0.2608,0,-0.816368,0.476207,-0.650567,1],
+					"geometry": "A21BD2F7-3B46-46F4-85E4-9F514BF54E40",
+					"material": "50ED51F1-DEA4-4B61-8082-BF41609E8C27"
+				},
+				{
+					"uuid": "734FB169-8E44-4D8D-91DB-0B670227AF3E",
+					"type": "Mesh",
+					"name": "Icosahedron 1",
+					"castShadow": true,
+					"receiveShadow": true,
+					"matrix": [0.33355,0,0.601615,0,-0.090294,-0.6801,0.050061,0,0.5948,-0.103243,-0.329772,0,-0.712408,0.335723,-0.574091,1],
+					"geometry": "735873C7-FDC2-4A47-95E1-E8345338DC6C",
+					"material": "50ED51F1-DEA4-4B61-8082-BF41609E8C27"
+				},
+				{
+					"uuid": "37119CAB-255A-4CE1-9DBB-B65963452E75",
+					"type": "Mesh",
+					"name": "Icosahedron 1",
+					"castShadow": true,
+					"receiveShadow": true,
+					"matrix": [-0.098006,0.579112,-0.358077,0,0.331366,0.356603,0.486032,0,0.5948,-0.103243,-0.329772,0,-0.402246,0.911859,-1.576116,1],
+					"geometry": "735873C7-FDC2-4A47-95E1-E8345338DC6C",
+					"material": "50ED51F1-DEA4-4B61-8082-BF41609E8C27"
+				},
+				{
+					"uuid": "D93594A8-7D98-4732-A24B-2D951AC30518",
+					"type": "Mesh",
+					"name": "Icosahedron 1",
+					"castShadow": true,
+					"receiveShadow": true,
+					"matrix": [-0.147381,-0.858342,0.491455,0,0.021343,-0.499525,-0.866036,0,0.98885,-0.117148,0.09194,0,1.566355,0.220352,2.415745,1],
+					"geometry": "A21BD2F7-3B46-46F4-85E4-9F514BF54E40",
+					"material": "50ED51F1-DEA4-4B61-8082-BF41609E8C27"
+				},
+				{
+					"uuid": "C4078753-42E9-4020-96A3-93AB7C64A328",
+					"type": "Mesh",
+					"name": "Icosahedron 1",
+					"castShadow": true,
+					"receiveShadow": true,
+					"matrix": [-0.529477,-3.083659,1.76559,0,-0.92661,-0.053966,-0.372131,0,0.658214,-0.970818,-1.498174,0,0.278136,0.174094,1.140251,1],
+					"geometry": "A21BD2F7-3B46-46F4-85E4-9F514BF54E40",
+					"material": "50ED51F1-DEA4-4B61-8082-BF41609E8C27"
+				},
+				{
+					"uuid": "DD4200DA-DA57-4531-B322-B8073BBBDBEC",
+					"type": "Mesh",
+					"name": "Icosahedron 1",
+					"castShadow": true,
+					"receiveShadow": true,
+					"matrix": [-0.931611,-5.425671,3.10654,0,-1.630362,-0.094952,-0.654761,0,1.158123,-1.708145,-2.636024,0,0.434422,2.07848,-1.356581,1],
+					"geometry": "A21BD2F7-3B46-46F4-85E4-9F514BF54E40",
+					"material": "50ED51F1-DEA4-4B61-8082-BF41609E8C27"
+				}],
+			"background": 11184810
+		}
+	},
+	"scripts": {
+		"FC7B6CF2-6386-4F47-9CE6-8ADB9FCA6E1F": [
+			{
+				"name": "",
+				"source": "function update( event ) {\n\n\tthis.material.uniforms.time.value = event.time / 500.0;\n\n}"
+			}]
+	}
+}
