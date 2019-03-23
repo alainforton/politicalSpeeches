@@ -53,10 +53,10 @@ var end = new Date('05/17/2019 11:30 AM');
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
 
-        document.getElementById('timeToEnd').innerHTML ='JW-'+ days + '-D ';
-        document.getElementById('timeToEnd').innerHTML +='OI-'+ hours + '-H ';
-        document.getElementById('timeToEnd').innerHTML +='HC-'+ minutes + '-M ';
-        document.getElementById('timeToEnd').innerHTML +='NK-'+ seconds + '-S';
+        document.getElementById('timeToEnd').innerHTML ='J'+ days + 'D ';
+        document.getElementById('timeToEnd').innerHTML +='O'+ hours + 'H ';
+        document.getElementById('timeToEnd').innerHTML +='H'+ minutes + 'M ';
+        document.getElementById('timeToEnd').innerHTML +='N'+ seconds + 'S';
     }
 timer = setInterval(showRemaining, 10);
    
