@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+.centeredd {
+  position: absolute;
+  font-size: 160%;
+  top: 199%;
+  left: 61.5%;
+  transform: translate(-20%, -50%);
+}
+
+</style>
+
+</head>
+<body>
+<div class="container">
+<img 	src="https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2019/01/keanu-reeves-john-wick-chapter-3-parabellum.jpg?itok=35pLBxm0" alt="" width="100%" height="100%">
+ <div class="centered" id="">
+ <div class="centeredd" id="timeToEnd"></div>
+ 
+
+</div>
+<p id="demo"></p>
+<script>
+
+var end = new Date('05/17/2019 11:30 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('timeToEnd').innerHTML ='JW'+ days + 'D ';
+        document.getElementById('timeToEnd').innerHTML +='OI'+ hours + 'H ';
+        document.getElementById('timeToEnd').innerHTML +='HC'+ minutes + 'M ';
+        document.getElementById('timeToEnd').innerHTML +='NK'+ seconds + 'S';
+    }
+timer = setInterval(showRemaining, 10);
+   
+</script>
+</body>
+</html>
