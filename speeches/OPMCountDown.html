@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OPMCountDown</title>
+<style>
+
+.containerP {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centeredP {
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+.centereddP {
+  position: absolute;
+  font-size: 160%;
+  top: 199%;
+  left: 61.5%;
+  transform: translate(-20%, -50%);
+}
+</style>
+
+</head>
+<body>
+<div class="containerP">
+  
+<img 	src="https://i.ytimg.com/vi/mcgIS0jHhEM/maxresdefault.jpg" id="image"  alt="" width="100%" height="100%">
+ <div class="centeredP" id="">
+ <div class="centereddP" id="onepunch" style="display:block"></div>
+ 
+</div>
+<script>
+
+
+var endPunch = new Date('04/02/2019 07:30 AM');
+    
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+	//TODO hacer una funcion(string fecha) onreday=(funcion('04/02/2019 11:30 AM'))
+	//para evitar duplicar
+    function showRemaining() {
+        var now = new Date();
+        var distanceP = endPunch - now;
+   		var daysP = Math.floor(distanceP / _day);
+        var hoursP = Math.floor((distanceP % _day) / _hour);
+        var minutesP = Math.floor((distanceP % _hour) / _minute);
+        var secondsP = Math.floor((distanceP % _minute) / _second);
+        
+        //se tendria que enviar el String del nombre if(4)
+        document.getElementById('onepunch').innerHTML =  'O'+ daysP + 'D '
+        												+'N'+ hoursP + 'H '
+                                                        +'E'+ minutesP + 'M '
+                                                        +'P'+ secondsP + 'S';
+    }
+   
+timer = setInterval(showRemaining, 10);
+//hacer modulos para poder hacer diferentes countdown-s   
+</script>
+</body>
+</html>
