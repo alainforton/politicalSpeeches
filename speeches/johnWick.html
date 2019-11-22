@@ -2,6 +2,7 @@
 <html>
 <head>
 <style>
+  html {    background-color: black; }
 .container {
   position: relative;
   text-align: center;
@@ -25,10 +26,23 @@
   transform: translate(-20%, -50%);
 }
 .centeredw {
+  font-size: 39px;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
   margin-right: 10px;
   margin-left: 10px;
+  position: absolute;
+  font-size: 160%;
+  top: 199%;
+  left: 61.5%;
+  transform: translate(-20%, -50%);
+}
+  .centeredl {    
+  font-size: 19px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin-right: 10x;
+  margin-left: 10x;
   position: absolute;
   font-size: 160%;
   top: 199%;
@@ -46,7 +60,7 @@
  <div >
    <div class="centeredw" id="name" style="display:block"></div>
   <div class="centeredd" id="timeToEnd" style="display:block"></div>
-  <!--<div class="centeredd" id="dataTime" style="display:block"></div>--> 
+  <div class="centeredl id="dataTime" style="display:block"></div>
  </div>
  
 
@@ -73,7 +87,7 @@ var end = new Date('05/21/2021 11:30 AM');
 
         document.getElementById('name').innerHTML ='J O H N';
         document.getElementById('timeToEnd').innerHTML =days+' '+hours+' '+minutes+' '+seconds;
-        //document.getElementById('dataTime').innerHTML +='N'+  + 'S';
+        document.getElementById('dataTime').innerHTML ='D H M S';
     }
     
 timer = setInterval(showRemaining, 10);
