@@ -30,7 +30,11 @@
   
 <img 	src="https://d32c3oe4bky4k6.cloudfront.net/articles-videos/-/media/uscamediasite/images/story-images/2019/05/14/john_wick(116).ashx?modified=20190514132859&mw=1920&hash=F8A61192CB33A0F461C6FC02E51B19798480E1FC" id="image"  alt="" width="100%" height="100%">
  <div class="centered" id="">
- <div class="centeredd" id="timeToEnd" style="display:block"></div>
+ <div >
+   <div class="centeredd" id="name" style="display:block"></div>
+  <div class="centeredd" id="timeToEnd" style="display:block"></div>
+  <!--<div class="centeredd" id="dataTime" style="display:block"></div>--> 
+ </div>
  
 
 </div>
@@ -38,7 +42,7 @@
 
 var end = new Date('05/21/2021 11:30 AM');
     
-    //setTimeout(myFunction, 5000);
+    
     var _second = 1000;
     var _minute = _second * 60;
     var _hour = _minute * 60;
@@ -54,19 +58,11 @@ var end = new Date('05/21/2021 11:30 AM');
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
 
-        document.getElementById('timeToEnd').innerHTML ='J'+ days + 'D ';
-        document.getElementById('timeToEnd').innerHTML +='O'+ hours + 'H ';
-        document.getElementById('timeToEnd').innerHTML +='H'+ minutes + 'M ';
-        document.getElementById('timeToEnd').innerHTML +='N'+ seconds + 'S';
+        document.getElementById('name').innerHTML ='J O H N';
+        document.getElementById('timeToEnd').innerHTML =days+' '+hours+' '+minutes+' '+seconds;
+        //document.getElementById('dataTime').innerHTML +='N'+  + 'S';
     }
-    function myFunction() {
-    	
-        document.getElementById('timeToEnd').style.display = "none";
-        document.getElementById('image').style.opacity = 0.5;
-        document.getElementById('video').style.display = "block";
-        
     
-    }
 timer = setInterval(showRemaining, 10);
    
 </script>
