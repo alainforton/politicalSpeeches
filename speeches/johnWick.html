@@ -74,9 +74,17 @@ var end = new Date('05/21/2021 11:30 AM');
         var hours = Math.floor((distance % _day) / _hour);
         var minutes = Math.floor((distance % _hour) / _minute);
         var seconds = Math.floor((distance % _minute) / _second);
-
+         
+        var zeroD = days < 10 ? "0" : "";
+        var zeroH = hours < 10 ? "0" : "";
+        var zeroM = minutes < 10 ? "0" : "";
+        var zeroS = seconds < 10 ? "0" : "";
+      
         document.getElementById('name').innerHTML ='J O H N';
-        document.getElementById('timeToEnd').innerHTML =days+' '+hours+' '+minutes+' '+seconds;
+        document.getElementById('timeToEnd').innerHTML =zeroD+days
+                                                  +' '+zeroH+hours
+                                                  +' '+zeroM+minutes
+                                                  +' '+zeroS+seconds;
         document.getElementById('dataTime').innerHTML ='D H M S';
     }
     
