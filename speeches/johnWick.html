@@ -3,6 +3,9 @@
 <head>
   <script>
 
+document.getElementsByTagName('img').onload = start();
+
+function start(){
 var end = new Date('05/21/2021 11:30 AM');
     
     
@@ -32,9 +35,10 @@ var end = new Date('05/21/2021 11:30 AM');
                                                   +' '+zeroM+minutes
                                                   +' '+zeroS+seconds;
         //document.getElementById('dataTime').innerHTML ='D H M S';
+		
     }
-    
-timer = setInterval(showRemaining, 10);
+    timer = setInterval(showRemaining, 10);
+}
    
 </script>
 <style>
@@ -79,18 +83,20 @@ timer = setInterval(showRemaining, 10);
 
 </head>
 <body>
-<div class="container">
-  
-<img 	src="https://d32c3oe4bky4k6.cloudfront.net/articles-videos/-/media/uscamediasite/images/story-images/2019/05/14/john_wick(116).ashx?modified=20190514132859&mw=1920&hash=F8A61192CB33A0F461C6FC02E51B19798480E1FC" id="image"  alt="" width="100%" height="100%">
- <div class="centered" id="">
- <div >
-   <div class="centeredw" id="name" style="display:block"></div>
-  <div class="centeredd" id="timeToEnd" style="display:block"></div>
-  <!--<div class="centeredl" id="dataTime" style="display:block"></div>-->
- </div>
- 
 
-</div>
+	<div class="container">
+	  
+	<img src="https://d32c3oe4bky4k6.cloudfront.net/articles-videos/-/media/uscamediasite/images/story-images/2019/05/14/john_wick(116).ashx?modified=20190514132859&mw=1920&hash=F8A61192CB33A0F461C6FC02E51B19798480E1FC" id="image"  alt="" width="100%" height="100%">
+	 <div class="centered" id="">
+	 <div >
+	   <div class="centeredw" id="name" style="display:block"></div>
+	  <div class="centeredd" id="timeToEnd" style="display:block"></div>
+	  <!--<div class="centeredl" id="dataTime" style="display:block"></div>-->
+	 </div>
+	 
+
+	</div>
 
 </body>
+
 </html>
